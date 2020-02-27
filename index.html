@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CO2 Beregner</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form autocomplete="off" method="post" id="udregner" onsubmit="return calculate(this);">
+            <h1>CO2 Beregner</h1>
+
+            <div>
+                <label for="val">Indtast din rejse i kilometer</label>
+                <input type="text" name="val" id="val" value="" placeholder="Km">
+                <label for="person">Indtast antal personer</label>
+                <input type="text" name="person" id="person" value="" placeholder="Antal personer">
+            </div>
+
+            <select name="transport" id="transport">
+                <option value="0.027" id="bus">Bus</option>
+                <option value="0" id="cykel">Cykel</option>
+                <option value="0.037" id="tog">Tog</option>
+                <option value="0.160" id="bil">Bil</option>
+                <option value="0.170" id="færge">Færge</option>
+                <option value="0.223" id="fly">Fly</option>
+            </select>
+        
+            <label for="result" class="labelres">For hele rejsen</label>
+            <p id="result"></p>
+            <label for="resultp" class="labelres">Per person</label>
+            <p id="resultp"></p>
+        </form>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
