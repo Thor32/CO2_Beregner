@@ -19,7 +19,7 @@ function calculate() {
     let busval = transport*km;
     
     //putter det endelige resultat ind i et tomt <p> tag inde i HTML dokumentet
-    document.querySelector('#result').innerHTML = parseFloat(busval.toFixed(2)) + " kg";
+    document.querySelector('#result').innerHTML = parseFloat(busval.toFixed(2)) + " kg co2";
     return false;
 }
 }
@@ -48,7 +48,7 @@ function calculatep() {
     let newresult = busval / persondata;
 
     //putter det endelige resultat ind i et NYT tomt <p> tag inde i HTML dokumentet
-    document.querySelector('#resultp').innerHTML = parseFloat(newresult.toFixed(2)) + " kg";
+    document.querySelector('#resultp').innerHTML = parseFloat(newresult.toFixed(2)) + " kg co2";
     return false;
 }
 }
