@@ -19,7 +19,6 @@ function calculate() {
     
     //putter det endelige resultat ind i et tomt <p> tag inde i HTML dokumentet
     document.querySelector('#result').innerHTML = parseFloat(busval.toFixed(2)) + " kg co2";
-    return false;
 }
 }
 
@@ -45,7 +44,6 @@ function calculatep() {
 
     //putter det nye resultat ind i et NYT tomt <p> tag inde i HTML dokumentet
     document.querySelector('#resultp').innerHTML = parseFloat(newresult.toFixed(2)) + " kg co2";
-    return false;
 }
 }
 
