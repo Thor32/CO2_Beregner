@@ -1,3 +1,5 @@
+let transport = document.querySelector('#transport')
+let km = document.querySelector('#val')
 
 //ganger de co2 values vi fik med det man skriver i input feltet
 function calculate() {
@@ -11,12 +13,9 @@ function calculate() {
             document.querySelector('#result').innerHTML = "";
             return false;
         }
-    //laver en variabel ud af <select>'s value som er skrevet inde i HTML tagget
-    let transport = document.querySelector('#transport').value;
-    //laver en variabel ud af det som er blevet skrevet ind i input feltet
-    let km = document.querySelector('#val').value;
-    //ganger de to values sammen
-    let busval = transport*km;
+    
+    //ganger valuen af den valgte <option> og putter det ind i en variabel
+    let busval = transport.value*km.value;
     
     //putter det endelige resultat ind i et tomt <p> tag inde i HTML dokumentet
     document.querySelector('#result').innerHTML = parseFloat(busval.toFixed(2)) + " kg co2";
@@ -36,18 +35,15 @@ function calculatep() {
             return false;
         }
     
-    /*har brug for samme variabler her, da de ikke kan hentes fra den anden funktion
-       (har ikke kunne lave dem globale, ved ikke hvorfor)*/
-    let transport = document.querySelector('#transport').value;
-    let km = document.querySelector('#val').value;
-    let busval = transport*km;
+    //ganger valuen af den valgte <option> og putter det ind i en variabel (dette skal gøres igen i denne funktion da den ikke kan hentes fra den anden)
+    let busval = transport.value*km.value;
 
     //laver en variabel ud af det som bliver skrevet i "person" input feltet
     let persondata = document.querySelector('#person').value;
     //dividere resultatet af første funktion med det nye input
     let newresult = busval / persondata;
 
-    //putter det endelige resultat ind i et NYT tomt <p> tag inde i HTML dokumentet
+    //putter det nye resultat ind i et NYT tomt <p> tag inde i HTML dokumentet
     document.querySelector('#resultp').innerHTML = parseFloat(newresult.toFixed(2)) + " kg co2";
     return false;
 }
